@@ -130,7 +130,7 @@ void App::Render()
 
             //We subdivide half imgSize to make the center of image be at position of pos
             SDL_FRect particleRect { SCREEN_WIDTH/2.f + (pos.x - imgSize/2), 
-                                    SCREEN_HEIGHT/2.f - (pos.y - imgSize/2), 
+                                    SCREEN_HEIGHT/2.f - (pos.y + imgSize/2), 
                                     imgSize, 
                                     imgSize};
             
