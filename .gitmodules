@@ -1,0 +1,9 @@
+[submodule "SDL"]
+	path = Dependency/SDL
+	url = git@github.com:libsdl-org/SDL.git
+[submodule "entt"]
+	path = Dependency/entt
+	url = git@github.com:skypjack/entt.git
+[submodule "SDL_image"]
+	path = Dependency/SDL_image
+	url = git@github.com:libsdl-org/SDL_image.git
