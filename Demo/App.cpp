@@ -29,20 +29,20 @@ App::~App()
 void App::AddParticle()
 {
     const auto entity = ecs.create();
-    ecs.emplace<Position>(entity, 40 * (2.f * random() / RAND_MAX - 1.f), 0.0f);
+    ecs.emplace<Position>(entity, 40 * (2.f * rand() / RAND_MAX - 1.f), 0.0f);
     
     auto& vel = ecs.emplace<Velocity>(entity);
-    vel.dx = (2.f * random() / RAND_MAX - 1.f) / 2.f;
+    vel.dx = (2.f * rand() / RAND_MAX - 1.f) / 2.f;
     vel.dy = 1.f;
     
-    float speed = 70 + 25 * (2.f * random() / RAND_MAX - 1.f);
+    float speed = 70 + 25 * (2.f * rand() / RAND_MAX - 1.f);
 
     float max = sqrt(vel.dx * vel.dx + vel.dy * vel.dy);
     vel.dx *= speed / max;
     vel.dy *= speed / max;
 
 
-    ecs.emplace<GravityData>(entity, 60 + 5 * (2.f * random() / RAND_MAX));
+    ecs.emplace<GravityData>(entity, 60 + 5 * (2.f * rand() / RAND_MAX));
     ecs.emplace<Image>(entity, texture);
 }
 
