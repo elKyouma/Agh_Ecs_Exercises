@@ -1,9 +1,12 @@
 [submodule "SDL"]
 	path = Dependency/SDL
 	url = git@github.com:libsdl-org/SDL.git
+    shallow = true
 [submodule "entt"]
 	path = Dependency/entt
 	url = git@github.com:skypjack/entt.git
+    shallow = true
 [submodule "SDL_image"]
 	path = Dependency/SDL_image
 	url = git@github.com:libsdl-org/SDL_image.git
+    shallow = true
