@@ -41,8 +41,8 @@ private:
     static constexpr uint16_t SCREEN_WIDTH = 1000;
     static constexpr uint16_t SCREEN_HEIGHT = 800;
 
-    static constexpr int numberOfParticles = 100; //Particles max amount
-    static constexpr int particlesPerBurst = 5; //Speed of spawning new particles
+    static constexpr int numberOfParticles = 300; //Particles max amount
+    static constexpr int particlesPerBurst = 10; //Speed of spawning new particles
     static constexpr float reloadTime = 0.1; //Tells how often you should spawn particles
     
     float deltaTime;

@@ -94,8 +94,11 @@ void App::Update()
     {
         timer = reloadTime;
         if(particleCount < numberOfParticles)
+        {    
             for(int i = 0; i < particlesPerBurst; i++)
                 AddParticle();
+            particleCount += particlesPerBurst;
+        }
     }
 
     //Change all the positions by velocity
