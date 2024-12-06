@@ -1,8 +1,8 @@
 #include "App.hpp"
 #include "SDL3/SDL_render.h"
+#include "SDL3/SDL_timer.h"
 #include "Utils.hpp"
 #include <SDL3/SDL.h>
-#include <chrono>
 #include <cmath>
 #include <cstdlib>
 #include <string>
@@ -82,9 +82,9 @@ void App::Update()
 {
     {
         //Calculate new deltaTime
-        auto now = std::chrono::high_resolution_clock::now();
-        deltaTime = std::chrono::duration_cast<std::chrono::nanoseconds>(now - prevFrameStart).count() / 1.e9;
-        prevFrameStart = now;
+        Uint64 thisFrameStart = SDL_GetPerformanceCounter();
+        deltaTime =  (float)((thisFrameStart - prevFrameStart) / (double)SDL_GetPerformanceFrequency() );
+        prevFrameStart = thisFrameStart;
     }
 
     //Add new particles as long as we dont have max amount of them

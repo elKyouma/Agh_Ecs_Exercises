@@ -1,6 +1,6 @@
 #pragma once
 #include "SDL3/SDL_render.h"
-#include <chrono>
+#include "SDL3/SDL_timer.h"
 #include <SDL3/SDL_render.h>
 #include <cstdint>
 #include <entt/entt.hpp>
@@ -47,10 +47,8 @@ private:
     
     float deltaTime;
     float timer;
-
-    //Just time from previous frame. Why c++ why???
-    std::chrono::time_point<std::chrono::high_resolution_clock> prevFrameStart{std::chrono::high_resolution_clock::now()};
-
+    Uint64 prevFrameStart = SDL_GetPerformanceCounter();
+    
     //Entt Ecs
     entt::registry ecs;
 };
