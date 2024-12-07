@@ -16,7 +16,7 @@ public:
 
     //Analyze inputs, do action and return true if 
     // it got quiting app message
-    bool ProcessInputs();
+    bool ProcessEvents();
     
     //Draw everything to window
     void Render();

@@ -62,7 +62,7 @@ void App::Clean()
 	SDL_DestroyTexture(texture);
 }
 
-bool App::ProcessInputs()
+bool App::ProcessEvents()
 {
     bool isQuiting = false;
 
@@ -137,7 +137,7 @@ void App::Render()
                                     imgSize, 
                                     imgSize};
             
-              SDL_RenderTexture(renderer, img.texture, NULL, &particleRect);
+            SDL_RenderTexture(renderer, img.texture, NULL, &particleRect);
         });
 
     //Present frame (send frame to gpu to render it)

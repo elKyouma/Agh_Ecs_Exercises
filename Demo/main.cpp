@@ -6,7 +6,7 @@ int main(int argc, char* argv[])
     App app;
 	bool isQuiting = false;
     while (!isQuiting) {
-        isQuiting = app.ProcessInputs();
+        isQuiting = app.ProcessEvents();
         app.Update();
         app.Render();
 	}
