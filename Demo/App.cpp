@@ -68,14 +68,14 @@ bool App::ProcessEvents()
 
     //Get new window
     SDL_Event event;
-    SDL_PollEvent(&event);
-
-    //If we gets quit window message return value is true
-    if (event.type == SDL_EVENT_QUIT)
-		isQuiting = true;
+    while(SDL_PollEvent(&event))
+    {
+        //If we gets quit window message return value is true
+        if (event.type == SDL_EVENT_QUIT)
+		    isQuiting = true;
+    }
 
     return isQuiting;
-
 }
 
 void App::Update()
