@@ -1,4 +1,4 @@
-add_executable(App main.cpp App.cpp Utils.cpp)
+add_executable(App main.cpp App.cpp)
 target_link_libraries(App PRIVATE Dependencies)
 target_compile_features(App PRIVATE cxx_std_20)
 

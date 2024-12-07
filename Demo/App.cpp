@@ -1,7 +1,7 @@
 #include "App.hpp"
 #include "SDL3/SDL_render.h"
 #include "SDL3/SDL_timer.h"
-#include "Utils.hpp"
+#include "SDL3_image/SDL_image.h"
 #include <SDL3/SDL.h>
 #include <cmath>
 #include <cstdlib>
@@ -53,7 +53,7 @@ void App::Initialise()
 	path += "gandalf.jpg";
     
     //Load graphic to texture used by particles
-    texture = LoadTextureFromFile(renderer, path);
+    texture = IMG_LoadTexture(renderer, path.c_str());
     timer = reloadTime;
 }
 
